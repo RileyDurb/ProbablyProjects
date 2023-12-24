@@ -1,3 +1,7 @@
+/*
+Brief Descriptions: Setup code included with outside engine
+*/
+
 #include <pch.h>
 #include "Projects/ProjectOne.h"
 #include "Agent/CameraAgent.h"

@@ -46,4 +46,4 @@ mem0 mem9:
 	valgrind $(VALGRIND_OPTIONS) ./$(PRG) $(subst mem,,$@) 1>/dev/null 2>difference$@
 	@echo "lines after this are memory errors"; cat difference$@
 clean:
-	rm -f *.exe *.o student* difference*
+	rm -f *.exe *.o my* difference*
