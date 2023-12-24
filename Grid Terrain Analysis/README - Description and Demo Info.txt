@@ -4,6 +4,9 @@ For example, one of the functions calculates the general level of visibility of 
 a shade of orange that is darker the more visible it is from other tiles. Then, the idea here is that it can be used
 to inform AI decisions, and other things, if utilized.
 
+Main code file:
+P3_TerrainAnalysis.cpp
+
 Included is a project demo, utilizing a provided engine, and feel free to run the Grid terrain Analysis executable
 if you'd like to see it.
 
