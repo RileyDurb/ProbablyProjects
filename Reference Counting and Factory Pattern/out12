@@ -1,0 +1,10 @@
+print( *pArray1 );   [1] [2] [3] [4] [5] [6] [7] [8] [9] 
+Element1: live  nodes  9
+Element1: total nodes  9
+Element2: live  nodes  0
+Element2: total nodes  0
+print( *pArray3 );   [1] [2] [3] [4] [5] [6] [7] [8] [9] 
+Element1: live  nodes  9
+Element1: total nodes  11
+Element2: live  nodes  0
+Element2: total nodes  0

@@ -1,0 +1,10 @@
+int give_my_array(...) print( result );   (2) (4) (6) (8) (10) (12) (14) (16) (18) 
+Element1: live  nodes  0
+Element1: total nodes  9
+Element2: live  nodes  9
+Element2: total nodes  9
+in test result from give_my_array     (2) (4) (6) (8) (10) (12) (14) (16) (18) 
+Element1: live  nodes  0
+Element1: total nodes  9
+Element2: live  nodes  9
+Element2: total nodes  9
