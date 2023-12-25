@@ -1,0 +1,27 @@
+print( myArray1 );   [1] [2] [3] [4] [5] [6] 
+Element1: live  nodes  6
+Element1: total nodes  6
+Element2: live  nodes  0
+Element2: total nodes  0
+Set myArray1.Set(2,3,33);
+print( myArray1 );   [1] [2] [3] (33) [5] [6] 
+Element1: live  nodes  5
+Element1: total nodes  6
+Element2: live  nodes  1
+Element2: total nodes  1
+print( myArray2 );   [1] [2] [3] [4] [5] [6] [7] [8] [9] 
+Element1: live  nodes  14
+Element1: total nodes  15
+Element2: live  nodes  1
+Element2: total nodes  1
+Assign myArray2 = myArray1;
+print( myArray1 );   [1] [2] [3] (33) [5] [6] 
+Element1: live  nodes  5
+Element1: total nodes  15
+Element2: live  nodes  1
+Element2: total nodes  1
+print( myArray2 );   [1] [2] [3] (33) [5] [6] 
+Element1: live  nodes  5
+Element1: total nodes  15
+Element2: live  nodes  1
+Element2: total nodes  1

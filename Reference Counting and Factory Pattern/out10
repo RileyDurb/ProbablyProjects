@@ -1,0 +1,21 @@
+print( *p_myArray1 );   [1] [2] [3] [4] [5] [6] 
+Element1: live  nodes  6
+Element1: total nodes  6
+Element2: live  nodes  0
+Element2: total nodes  0
+print( *p_myArray1 );   [1] [2] [3] [4] [5] [6] 
+Element1: live  nodes  6
+Element1: total nodes  6
+Element2: live  nodes  0
+Element2: total nodes  0
+print( myArray2 );   [1] [2] [3] [4] [5] [6] 
+Element1: live  nodes  6
+Element1: total nodes  6
+Element2: live  nodes  0
+Element2: total nodes  0
+delete p_myArray1;
+print( myArray2 );   [1] [2] [3] [4] [5] [6] 
+Element1: live  nodes  6
+Element1: total nodes  6
+Element2: live  nodes  0
+Element2: total nodes  0

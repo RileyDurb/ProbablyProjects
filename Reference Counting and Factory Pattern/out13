@@ -1,0 +1,47 @@
+print( myArray1 );   [1] [2] [3] [4] [5] 
+Element1: live  nodes  28
+Element1: total nodes  28
+Element2: live  nodes  0
+Element2: total nodes  0
+print( myArray2 );   [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] 
+Element1: live  nodes  28
+Element1: total nodes  28
+Element2: live  nodes  0
+Element2: total nodes  0
+print( myArray3 );   [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] 
+Element1: live  nodes  28
+Element1: total nodes  28
+Element2: live  nodes  0
+Element2: total nodes  0
+Assign myArray3=myArray1;
+print( myArray1 );   [1] [2] [3] [4] [5] 
+Element1: live  nodes  18
+Element1: total nodes  28
+Element2: live  nodes  0
+Element2: total nodes  0
+print( myArray2 );   [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] 
+Element1: live  nodes  18
+Element1: total nodes  28
+Element2: live  nodes  0
+Element2: total nodes  0
+print( myArray3 );   [1] [2] [3] [4] [5] 
+Element1: live  nodes  18
+Element1: total nodes  28
+Element2: live  nodes  0
+Element2: total nodes  0
+Assign myArray3=myArray2;
+print( myArray1 );   [1] [2] [3] [4] [5] 
+Element1: live  nodes  18
+Element1: total nodes  28
+Element2: live  nodes  0
+Element2: total nodes  0
+print( myArray2 );   [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] 
+Element1: live  nodes  18
+Element1: total nodes  28
+Element2: live  nodes  0
+Element2: total nodes  0
+print( myArray3 );   [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] 
+Element1: live  nodes  18
+Element1: total nodes  28
+Element2: live  nodes  0
+Element2: total nodes  0

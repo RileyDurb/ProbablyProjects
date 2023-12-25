@@ -1,0 +1,27 @@
+print( myArray1 );   [1] [2] [3] (44) (55) [6] 
+Element1: live  nodes  4
+Element1: total nodes  6
+Element2: live  nodes  2
+Element2: total nodes  2
+print( myArray2 );   [1] [2] [3] 
+Element1: live  nodes  7
+Element1: total nodes  9
+Element2: live  nodes  2
+Element2: total nodes  2
+Assign myArray2 = myArray1;
+print( myArray2 );   [1] [2] [3] (44) (55) [6] 
+Element1: live  nodes  4
+Element1: total nodes  9
+Element2: live  nodes  2
+Element2: total nodes  2
+Modify myArray2
+print( myArray1 );   [1] [2] [3] (44) (55) [6] 
+Element1: live  nodes  7
+Element1: total nodes  13
+Element2: live  nodes  5
+Element2: total nodes  5
+print( myArray2 );   [1] (22) [3] (44) (55) [6] 
+Element1: live  nodes  7
+Element1: total nodes  13
+Element2: live  nodes  5
+Element2: total nodes  5
