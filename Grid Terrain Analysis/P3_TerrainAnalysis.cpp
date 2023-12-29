@@ -163,7 +163,7 @@ float GetMaxNeighborInfluence(MapLayer<float>& layer, GridPos tile, float decay,
     return maxNeighborInfluence;
 }
 ///////////////////////////////////////////////////////////////////////////////////////
-
+// Analysis Functions /////////////////////////////////////////////////////////////////
 
 float distance_to_closest_wall(int row, int col)
 {
@@ -183,11 +183,11 @@ float distance_to_closest_wall(int row, int col)
         {
             if (i == col && j == row) continue; // Skips if it's the tile we're checking from
 
-            // If outside the map, or not a wall
+            // If outside the map, or a wall
             if (terrain->is_valid_grid_position(j, i) == false || terrain->is_wall(j, i) == true)
             {
                 float currDist = GetEuclideanDist(col, row, i, j);
-                if (currDist < minDist) // if we've found a new min
+                if (currDist < minDist) // if we've found a new min distance
                 {
                     minDist = currDist; // Save the new min
                 }
@@ -731,16 +731,24 @@ bool enemy_find_player(MapLayer<float> &layer, AStarAgent *enemy, Agent *player)
 bool enemy_seek_player(MapLayer<float> &layer, AStarAgent *enemy)
 {
     /*
-        Attempt to find a cell with the highest nonzero value (normalization may
-        not produce exactly 1.0 due to floating point error), and then set it as
-        the new target, using enemy->path_to.
+    Peudocode:
+        highest value counter
+        vector of nodes with the highest value
 
-        If there are multiple cells with the same highest value, then pick the
-        cell closest to the enemy.
+        for each node
+            if current value is higher than saved highest
+                clear highest node vector
+                save new highest value
+                push position at highest value into vector
+            else if current value equal to highest
+                push node into highest node vector
 
-        Return whether a target cell was found.
+        if highest node vector has more than one nodes, find the one with the closest distance
+        if there are ones with the same closest distance, just pick the one at the beginning of the vector
+
+        also handle all 0
     */
-
+    
     float highestInfluenceValue = 0;
     std::vector<GridPos> highestValueTiles;
 
@@ -799,24 +807,7 @@ bool enemy_seek_player(MapLayer<float> &layer, AStarAgent *enemy)
 
         return true; // High value tile could be found, return true;
     }
-    /*
-    Peudocode:
-        highest value counter
-        vector of nodes with the highest value
 
-        for each node
-            if current value is higher than saved highest
-                clear highest node vector
-                save new highest value
-                push position at highest value into vector
-            else if current value equal to highest
-                push node into highest node vector
-
-        if highest node vector has more than one nodes, find the one with the closest distance
-        if there are ones with the same closest distance, just pick the one at the beginning of the vector
-
-        also handle all 0
-    */
         
 
     return false; // If reaching here, a case was not caught, as we should be handling both finding and missing a target
